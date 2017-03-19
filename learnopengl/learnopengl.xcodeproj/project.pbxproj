@@ -41,6 +41,7 @@
 		5CC295AF1E7E7129002B1E18 /* com_wang_hellounity_openglcsdndemo_GLSurfaceImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = com_wang_hellounity_openglcsdndemo_GLSurfaceImpl.cpp; sourceTree = "<group>"; };
 		5CC295B01E7E7129002B1E18 /* com_wang_hellounity_openglcsdndemo_GLSurfaceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = com_wang_hellounity_openglcsdndemo_GLSurfaceImpl.h; sourceTree = "<group>"; };
 		5CC295B11E7E7129002B1E18 /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
+		5CC295B31E7E7590002B1E18 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../../Androidgl/app/src/main/assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		5CC295A71E7E70B4002B1E18 /* jni */ = {
 			isa = PBXGroup;
 			children = (
+				5CC295B31E7E7590002B1E18 /* assets */,
 				5CC295AD1E7E7129002B1E18 /* Android.mk */,
 				5CC295AE1E7E7129002B1E18 /* Application.mk */,
 				5CC295AF1E7E7129002B1E18 /* com_wang_hellounity_openglcsdndemo_GLSurfaceImpl.cpp */,

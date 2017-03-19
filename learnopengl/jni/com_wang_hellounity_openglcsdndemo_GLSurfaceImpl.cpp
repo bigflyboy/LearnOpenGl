@@ -11,7 +11,7 @@ JNIEXPORT void JNICALL Java_com_wang_hellounity_openglcsdndemo_GLSurfaceImpl_ini
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_com_wang_hellounity_openglcsdndemo_GLSurfaceImpl_onSurfaceCreated
-  (JNIEnv * env, jobject obj){
+(JNIEnv * env, jobject obj){
     glClearColor(0.1f,0.4f,0.7f,1.0f);
 
     float vertices[] = {
@@ -38,15 +38,21 @@ JNIEXPORT void JNICALL Java_com_wang_hellounity_openglcsdndemo_GLSurfaceImpl_onS
     glBindBuffer(GL_ARRAY_BUFFER,vbo);
     glBufferData(GL_ARRAY_BUFFER,sizeof(float)*30,vertices,GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER,0);
+    
+    unsigned int indexes[]={0,1,2,3,4,5};
 
+    glGenBuffers(1,&ibo);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,vbo);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER,sizeof(unsigned char)*6,indexes,GL_STATIC_DRAW);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,0);
     //init Texture
-//    char* bmpData=LoadFileContent("test.bmp");
-//    int width=0,height=0;
-//    unsigned char*imageData=DecodeBMP(bmpData,width,height);
-    //createTexture-2D
-//    mainTexture=CreateTextureWithBMPData(imageData,width,height);
-//    delete bmpData;
-    mainTexture = CreateTexture(256);
+    char* bmpData=LoadFileContent("test.bmp");
+    int width=0,height=0;
+    unsigned char*imageData=DecodeBMP(bmpData,width,height);
+//    createTexture-2D
+    mainTexture=CreateTextureWithBMPData(imageData,width,height);
+    delete bmpData;
+//    mainTexture = CreateTexture(256);
 }
 
 /*
@@ -68,11 +74,11 @@ JNIEXPORT void JNICALL Java_com_wang_hellounity_openglcsdndemo_GLSurfaceImpl_onS
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_com_wang_hellounity_openglcsdndemo_GLSurfaceImpl_onDrawFrame
-  (JNIEnv * env, jobject obj){
+(JNIEnv * env, jobject obj){
     glClear(GL_COLOR_BUFFER_BIT);
 
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
+//    glEnable(GL_BLEND);
+//    glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 
     glUseProgram(simple_program);
 
@@ -93,7 +99,9 @@ JNIEXPORT void JNICALL Java_com_wang_hellounity_openglcsdndemo_GLSurfaceImpl_onD
     glVertexAttribPointer(texcoordLocation,2,GL_FLOAT,GL_FALSE,sizeof(float)*5,(void*)(sizeof(float)*3));
 
     glBindBuffer(GL_ARRAY_BUFFER,0);
-
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     //draw
     glDrawArrays(GL_POINTS,0,1);
     glUseProgram(0);

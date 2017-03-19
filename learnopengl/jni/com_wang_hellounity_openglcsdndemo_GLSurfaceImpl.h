@@ -15,7 +15,7 @@
 extern "C" {
 #endif
 
-GLuint vbo;
+GLuint vbo,ibo;
 GLuint simple_program;
 GLint MLocation,VLocation,PLocation,positionLocation,texcoordLocation,mainTextureLocation;
 GLuint mainTexture;
