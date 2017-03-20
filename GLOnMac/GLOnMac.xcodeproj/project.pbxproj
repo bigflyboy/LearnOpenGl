@@ -16,6 +16,7 @@
 		5C589AE51E7EA5FA0058A4F9 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589AE41E7EA5FA0058A4F9 /* GLUT.framework */; };
 		5C589AE71E7EAB120058A4F9 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589AE61E7EAB120058A4F9 /* libglfw3.a */; };
 		5C589AEF1E7EAC840058A4F9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 5C589AEE1E7EAC840058A4F9 /* main.c */; };
+		5CE4D2271E7FC3830049DE97 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CE4D2251E7FC3830049DE97 /* Shader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,10 @@
 		5C589AE61E7EAB120058A4F9 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../../../../usr/local/lib/libglfw3.a; sourceTree = "<group>"; };
 		5C589AEC1E7EAC840058A4F9 /* demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = demo; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C589AEE1E7EAC840058A4F9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		5CE4D2231E7FBFFA0049DE97 /* basic.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.vs; sourceTree = "<group>"; };
+		5CE4D2241E7FC0110049DE97 /* basic.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.fs; sourceTree = "<group>"; };
+		5CE4D2251E7FC3830049DE97 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		5CE4D2261E7FC3830049DE97 /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +105,11 @@
 		5C589ACF1E7EA3830058A4F9 /* GLOnMac */ = {
 			isa = PBXGroup;
 			children = (
+				5CE4D2241E7FC0110049DE97 /* basic.fs */,
 				5C589AD01E7EA3830058A4F9 /* main.cpp */,
+				5CE4D2231E7FBFFA0049DE97 /* basic.vs */,
+				5CE4D2251E7FC3830049DE97 /* Shader.cpp */,
+				5CE4D2261E7FC3830049DE97 /* Shader.hpp */,
 			);
 			path = GLOnMac;
 			sourceTree = "<group>";
@@ -208,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CE4D2271E7FC3830049DE97 /* Shader.cpp in Sources */,
 				5C589AD11E7EA3830058A4F9 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +390,7 @@
 				5C589AF21E7EAC840058A4F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
