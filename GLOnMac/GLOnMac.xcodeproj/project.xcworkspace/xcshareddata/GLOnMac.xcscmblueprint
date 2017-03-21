@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D8F6215E30D8A58913F951634A90208A11FED9E9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E462A8629C664491E2C7ED0690178BB9DB6D7920" : 9223372036854775807,
+    "D8F6215E30D8A58913F951634A90208A11FED9E9" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E2FE592E-85D1-4E60-8DA5-AECF18EF11CD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E462A8629C664491E2C7ED0690178BB9DB6D7920" : "..\/..\/LibSources\/Simple-OpenGL-Image-Library",
+    "D8F6215E30D8A58913F951634A90208A11FED9E9" : "LearnOpenGl\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GLOnMac",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GLOnMac\/GLOnMac.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bigflyboy\/LearnOpenGl.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D8F6215E30D8A58913F951634A90208A11FED9E9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kbranigan\/Simple-OpenGL-Image-Library.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E462A8629C664491E2C7ED0690178BB9DB6D7920"
+    }
+  ]
+}

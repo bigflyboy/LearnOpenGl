@@ -39,7 +39,6 @@ Shader::Shader(const GLchar* vertexPath, const GLchar* fragmentPath){
     }
     const GLchar* vShaderCode = vertexCode.c_str();
     const GLchar* fShaderCode = fragmentCode.c_str();
-    std::cout << fShaderCode << std::endl;
 
     
     // 2. 编译着色器
