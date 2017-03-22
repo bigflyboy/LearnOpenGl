@@ -37,6 +37,15 @@ const GLchar* fragmentShaderSource = "#version 330 core\n"
 
 const GLuint WIDTH = 1024, HEIGHT = 728;
 
+GLfloat yaw   = -90.0f;	// Yaw is initialized to -90.0 degrees since a yaw of 0.0 results in a direction vector pointing to the right (due to how Eular angles work) so we initially rotate a bit to the left.
+GLfloat pitch =   0.0f;
+GLfloat lastX =  WIDTH  / 2.0;
+GLfloat lastY =  HEIGHT / 2.0;
+// Camera
+glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f,  3.0f);
+glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
+glm::vec3 cameraUp    = glm::vec3(0.0f, 1.0f,  0.0f);
+
 void key_callback(GLFWwindow* window,int key,int scancode,int action,int mode);
 
 int main(int argc, const char * argv[]) {
@@ -214,7 +223,8 @@ int main(int argc, const char * argv[]) {
         // Create transformations
         glm::mat4 view;
         glm::mat4 projection;
-        view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+
+        view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
         projection = glm::perspective(45.0f, (GLfloat)WIDTH / (GLfloat)HEIGHT, 0.1f, 100.0f);
         // Get their uniform location
         GLint modelLoc = glGetUniformLocation(ourShader.Program, "model");
@@ -257,3 +267,55 @@ void key_callback(GLFWwindow* window,int key,int scancode,int action,int mode){
     if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
         glfwSetWindowShouldClose(window, GL_TRUE);
 }
+bool firstMouse = true;
+void mouse_callback(GLFWwindow* window, double xpos, double ypos){
+    if (firstMouse)
+    {
+        lastX = xpos;
+        lastY = ypos;
+        firstMouse = false;
+    }
+    
+    GLfloat xoffset = xpos - lastX;
+    GLfloat yoffset = lastY - ypos; // Reversed since y-coordinates go from bottom to left
+    lastX = xpos;
+    lastY = ypos;
+    
+    GLfloat sensitivity = 0.05;	// Change this value to your liking
+    xoffset *= sensitivity;
+    yoffset *= sensitivity;
+    
+    yaw   += xoffset;
+    pitch += yoffset;
+    
+    // Make sure that when pitch is out of bounds, screen doesn't get flipped
+    if (pitch > 89.0f)
+        pitch = 89.0f;
+    if (pitch < -89.0f)
+        pitch = -89.0f;
+    
+    glm::vec3 front;
+    front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
+    front.y = sin(glm::radians(pitch));
+    front.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
+    cameraFront = glm::normalize(front);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
