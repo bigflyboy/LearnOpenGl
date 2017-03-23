@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>02Light.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>GLOnMac.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>5C2DECF91E837A8C00E1C795</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5C589ACC1E7EA3830058A4F9</key>
 		<dict>
 			<key>primary</key>
