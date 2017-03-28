@@ -28,6 +28,15 @@
 		5C589AE51E7EA5FA0058A4F9 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589AE41E7EA5FA0058A4F9 /* GLUT.framework */; };
 		5C589AE71E7EAB120058A4F9 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589AE61E7EAB120058A4F9 /* libglfw3.a */; };
 		5C589AEF1E7EAC840058A4F9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 5C589AEE1E7EAC840058A4F9 /* main.c */; };
+		5C6A012C1E8A3203000D975C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A012B1E8A3203000D975C /* main.cpp */; };
+		5C6A01301E8A3229000D975C /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589AE41E7EA5FA0058A4F9 /* GLUT.framework */; };
+		5C6A01311E8A3231000D975C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589AE21E7EA5F10058A4F9 /* Cocoa.framework */; };
+		5C6A01321E8A323A000D975C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589AE01E7EA5E60058A4F9 /* IOKit.framework */; };
+		5C6A01331E8A3244000D975C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589ADC1E7EA5C40058A4F9 /* OpenGL.framework */; };
+		5C6A01341E8A324F000D975C /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589ADE1E7EA5DA0058A4F9 /* CoreVideo.framework */; };
+		5C6A01351E8A326A000D975C /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589AE61E7EAB120058A4F9 /* libglfw3.a */; };
+		5C6A01361E8A326A000D975C /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589ADA1E7EA3BC0058A4F9 /* libGLEW.a */; };
+		5C6A01371E8A327B000D975C /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2DED091E837CE200E1C795 /* libSOIL.a */; };
 		5CE4D2271E7FC3830049DE97 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CE4D2251E7FC3830049DE97 /* Shader.cpp */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +60,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		5C589AEA1E7EAC840058A4F9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5C6A01271E8A3203000D975C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -84,6 +102,8 @@
 		5C589AE61E7EAB120058A4F9 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = ../../../../../../usr/local/lib/libglfw3.a; sourceTree = "<group>"; };
 		5C589AEC1E7EAC840058A4F9 /* demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = demo; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C589AEE1E7EAC840058A4F9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		5C6A01291E8A3203000D975C /* 03model */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 03model; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C6A012B1E8A3203000D975C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5CE4D2231E7FBFFA0049DE97 /* basic.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.vs; sourceTree = "<group>"; };
 		5CE4D2241E7FC0110049DE97 /* basic.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.fs; sourceTree = "<group>"; };
 		5CE4D2251E7FC3830049DE97 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
@@ -128,6 +148,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C6A01261E8A3203000D975C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C6A01371E8A327B000D975C /* libSOIL.a in Frameworks */,
+				5C6A01351E8A326A000D975C /* libglfw3.a in Frameworks */,
+				5C6A01361E8A326A000D975C /* libGLEW.a in Frameworks */,
+				5C6A01341E8A324F000D975C /* CoreVideo.framework in Frameworks */,
+				5C6A01331E8A3244000D975C /* OpenGL.framework in Frameworks */,
+				5C6A01321E8A323A000D975C /* IOKit.framework in Frameworks */,
+				5C6A01311E8A3231000D975C /* Cocoa.framework in Frameworks */,
+				5C6A01301E8A3229000D975C /* GLUT.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -153,6 +188,7 @@
 				5C589ACF1E7EA3830058A4F9 /* GLOnMac */,
 				5C589AED1E7EAC840058A4F9 /* demo */,
 				5C2DECFB1E837A8C00E1C795 /* 02Light */,
+				5C6A012A1E8A3203000D975C /* 03model */,
 				5C589ACE1E7EA3830058A4F9 /* Products */,
 				5C589AD71E7EA3B00058A4F9 /* Frameworks */,
 			);
@@ -164,6 +200,7 @@
 				5C589ACD1E7EA3830058A4F9 /* GLOnMac */,
 				5C589AEC1E7EAC840058A4F9 /* demo */,
 				5C2DECFA1E837A8C00E1C795 /* 02Light */,
+				5C6A01291E8A3203000D975C /* 03model */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,6 +239,14 @@
 				5C589AEE1E7EAC840058A4F9 /* main.c */,
 			);
 			path = demo;
+			sourceTree = "<group>";
+		};
+		5C6A012A1E8A3203000D975C /* 03model */ = {
+			isa = PBXGroup;
+			children = (
+				5C6A012B1E8A3203000D975C /* main.cpp */,
+			);
+			path = 03model;
 			sourceTree = "<group>";
 		};
 		5CB0151F1E80DDAE009B129F /* SOIL */ = {
@@ -265,6 +310,23 @@
 			productReference = 5C589AEC1E7EAC840058A4F9 /* demo */;
 			productType = "com.apple.product-type.tool";
 		};
+		5C6A01281E8A3203000D975C /* 03model */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C6A012F1E8A3203000D975C /* Build configuration list for PBXNativeTarget "03model" */;
+			buildPhases = (
+				5C6A01251E8A3203000D975C /* Sources */,
+				5C6A01261E8A3203000D975C /* Frameworks */,
+				5C6A01271E8A3203000D975C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 03model;
+			productName = 03model;
+			productReference = 5C6A01291E8A3203000D975C /* 03model */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -289,6 +351,11 @@
 						DevelopmentTeam = 7C42L52533;
 						ProvisioningStyle = Automatic;
 					};
+					5C6A01281E8A3203000D975C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7C42L52533;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 5C589AC81E7EA3830058A4F9 /* Build configuration list for PBXProject "GLOnMac" */;
@@ -306,6 +373,7 @@
 				5C589ACC1E7EA3830058A4F9 /* GLOnMac */,
 				5C589AEB1E7EAC840058A4F9 /* demo */,
 				5C2DECF91E837A8C00E1C795 /* 02Light */,
+				5C6A01281E8A3203000D975C /* 03model */,
 			);
 		};
 /* End PBXProject section */
@@ -335,6 +403,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C589AEF1E7EAC840058A4F9 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C6A01251E8A3203000D975C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C6A012C1E8A3203000D975C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +588,40 @@
 			};
 			name = Release;
 		};
+		5C6A012D1E8A3203000D975C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7C42L52533;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"/Users/wangzhiyuan/LibSources/Simple-OpenGL-Image-Library/output/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
+					"/Users/wangzhiyuan/LibSources/Simple-OpenGL-Image-Library/output/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5C6A012E1E8A3203000D975C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7C42L52533;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					"/Users/wangzhiyuan/LibSources/Simple-OpenGL-Image-Library/output/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib,
+					"/Users/wangzhiyuan/LibSources/Simple-OpenGL-Image-Library/output/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -522,6 +632,7 @@
 				5C2DECFF1E837A8C00E1C795 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C589AC81E7EA3830058A4F9 /* Build configuration list for PBXProject "GLOnMac" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +660,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		5C6A012F1E8A3203000D975C /* Build configuration list for PBXNativeTarget "03model" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C6A012D1E8A3203000D975C /* Debug */,
+				5C6A012E1E8A3203000D975C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
