@@ -37,7 +37,7 @@
 		5C6A01351E8A326A000D975C /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589AE61E7EAB120058A4F9 /* libglfw3.a */; };
 		5C6A01361E8A326A000D975C /* libGLEW.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C589ADA1E7EA3BC0058A4F9 /* libGLEW.a */; };
 		5C6A01371E8A327B000D975C /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2DED091E837CE200E1C795 /* libSOIL.a */; };
-		5C6A013C1E8A3B68000D975C /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A013A1E8A3B68000D975C /* Shader.cpp */; };
+		5C6A01491E8A4965000D975C /* libassimp.3.3.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A01481E8A4965000D975C /* libassimp.3.3.1.dylib */; };
 		5CE4D2271E7FC3830049DE97 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CE4D2251E7FC3830049DE97 /* Shader.cpp */; };
 /* End PBXBuildFile section */
 
@@ -107,9 +107,10 @@
 		5C6A012B1E8A3203000D975C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5C6A01381E8A3B68000D975C /* basic.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.vs; sourceTree = "<group>"; };
 		5C6A01391E8A3B68000D975C /* basic.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.fs; sourceTree = "<group>"; };
-		5C6A013A1E8A3B68000D975C /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
-		5C6A013B1E8A3B68000D975C /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
-		5C6A013E1E8A3C90000D975C /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
+		5C6A01461E8A468E000D975C /* libassimp.3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.3.3.1.dylib; path = "../../../../LibSources/assimp-3.3.1/lib/libassimp.3.3.1.dylib"; sourceTree = "<group>"; };
+		5C6A01481E8A4965000D975C /* libassimp.3.3.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.3.3.1.dylib; path = ../../../../../../usr/local/Cellar/assimp/3.3.1/lib/libassimp.3.3.1.dylib; sourceTree = "<group>"; };
+		5C89773A1E8A4AD50068EBAF /* shader.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
+		5C89773C1E8A4B080068EBAF /* shader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vs; sourceTree = "<group>"; };
 		5CE4D2231E7FBFFA0049DE97 /* basic.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.vs; sourceTree = "<group>"; };
 		5CE4D2241E7FC0110049DE97 /* basic.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = basic.fs; sourceTree = "<group>"; };
 		5CE4D2251E7FC3830049DE97 /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
@@ -158,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C6A01491E8A4965000D975C /* libassimp.3.3.1.dylib in Frameworks */,
 				5C6A01371E8A327B000D975C /* libSOIL.a in Frameworks */,
 				5C6A01351E8A326A000D975C /* libglfw3.a in Frameworks */,
 				5C6A01361E8A326A000D975C /* libGLEW.a in Frameworks */,
@@ -227,6 +229,8 @@
 		5C589AD71E7EA3B00058A4F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5C6A01481E8A4965000D975C /* libassimp.3.3.1.dylib */,
+				5C6A01461E8A468E000D975C /* libassimp.3.3.1.dylib */,
 				5C2DED091E837CE200E1C795 /* libSOIL.a */,
 				5C589AE61E7EAB120058A4F9 /* libglfw3.a */,
 				5C589AE41E7EA5FA0058A4F9 /* GLUT.framework */,
@@ -252,10 +256,9 @@
 			children = (
 				5C6A01381E8A3B68000D975C /* basic.vs */,
 				5C6A01391E8A3B68000D975C /* basic.fs */,
-				5C6A013A1E8A3B68000D975C /* Shader.cpp */,
-				5C6A013B1E8A3B68000D975C /* Shader.hpp */,
 				5C6A012B1E8A3203000D975C /* main.cpp */,
-				5C6A013E1E8A3C90000D975C /* Camera.hpp */,
+				5C89773A1E8A4AD50068EBAF /* shader.frag */,
+				5C89773C1E8A4B080068EBAF /* shader.vs */,
 			);
 			path = 03model;
 			sourceTree = "<group>";
@@ -421,7 +424,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C6A013C1E8A3B68000D975C /* Shader.cpp in Sources */,
 				5C6A012C1E8A3203000D975C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,6 +609,7 @@
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					"/Users/wangzhiyuan/LibSources/Simple-OpenGL-Image-Library/output/include",
+					/Users/wangzhiyuan/LibSources/LearnOpenGL/includes,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -624,6 +627,7 @@
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					"/Users/wangzhiyuan/LibSources/Simple-OpenGL-Image-Library/output/include",
+					/Users/wangzhiyuan/LibSources/LearnOpenGL/includes,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
