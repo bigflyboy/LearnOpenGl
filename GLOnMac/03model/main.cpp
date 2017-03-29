@@ -84,7 +84,7 @@ int main(int argc, const char * argv[]) {
     Shader ourShader("/Users/wangzhiyuan/Sources/MyGitHubSpace/LearnOpenGl/GLOnMac/03model/shader.vs", "/Users/wangzhiyuan/Sources/MyGitHubSpace/LearnOpenGl/GLOnMac/03model/shader.frag");
     
     // Load models
-    Model ourModel("/Users/wangzhiyuan/LibSources/LearnOpenGL/resources/objects/nanosuit/nanosuit.obj");
+    Model ourModel("/Users/wangzhiyuan/LibSources/LearnOpenGL/resources/objects/planet/planet.obj");
     // 程序循环
     while(!glfwWindowShouldClose(window))
     {
