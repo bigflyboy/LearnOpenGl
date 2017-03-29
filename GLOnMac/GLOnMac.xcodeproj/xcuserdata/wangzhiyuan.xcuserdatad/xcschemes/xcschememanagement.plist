@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>04framebuffer.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>GLOnMac.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -43,6 +48,11 @@
 			<true/>
 		</dict>
 		<key>5C6A01281E8A3203000D975C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C74A94C1E8B7D0C001522BF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
